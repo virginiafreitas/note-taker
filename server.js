@@ -8,3 +8,5 @@ const PORT = 3000; // Defines the port number to listen to
 
 const { v4: uuidv4 } = require('uuid'); // Imports UUID (Universally Unique Identifier) module to generate unique IDs
 
+const db = require('./db/db.json') // Imports the JSON file representing the database
+
