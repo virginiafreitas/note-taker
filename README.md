@@ -11,7 +11,7 @@ Cloned the initial code git repository. Added the following commands to the term
   [Click here to test the deployed application.](https://sheltered-depths-05983-c3b5f6fbd222.herokuapp.com/). This URL will open the browser with the application page. The initial page should display an introductory section about taking notes with Express and a button to get started. Click on the Get Started button. Click on "Note Title" to type a title to your note, and then on "Note Text" to type a description to your note. Then click on the save button that will display on the top-right side after you typed your note. That note should display on the list on the left side. Repeat for as many notes as you want. To access a note, click on its title on the left side, and the note with description should display on the right side. To delete a note, click on the delete button that is shown right next to the note title on the left side column. To add a new note, click on the plus sign on the top right side of the page. 
 
   ### Contributing
-  I have received advice from the UC Berkeley Extension tutors Henry Weigand on pseudocoding, and Corrado Alfano on debugging my code. I also reached out to the Mozilla Developer webpage (https://developer.mozilla.org/en-US/) and NPM Docs (https://docs.npmjs.com/) for documentation.
+  I have received advice from the UC Berkeley Extension tutors Henry Weigand on pseudocoding, and Corrado Alfano on debugging my code. I also reached out to the [Mozilla Developer](https://developer.mozilla.org/en-US/) webpage and [NPM Docs](https://docs.npmjs.com/) for documentation.
 
   ### Developer Information:
   - Virginia Freitas
@@ -24,6 +24,6 @@ Cloned the initial code git repository. Added the following commands to the term
   ### Table of Content
   * [Description](#description)
   * [Installation](#installation)
-  * [Developer Information]
+  * [Developer Information](#developer information)
   * [License](#license)
   
