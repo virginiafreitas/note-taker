@@ -15,6 +15,14 @@ app.use(express.static('public')); // Serves static files from the "public" dire
 app.use(express.urlencoded({ extended: true })); // Parses incoming request bodies with URL-encoded payloads
 app.use(express.json()); // Parses incoming request bodies with JSON payloads
 
+// Define routes and their respective handlers
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/index.html'))); // Handles GET requests to the root path and serves the "index.html" file from the "public" directory.
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, '/public/notes.html'))); // Handles GET requests to the "/notes" path and serves the "notes.html" file from the "public" directory.
+app.get('/api/notes', (req, res) => {
+  const savedNotes = db;
+  res.json(savedNotes)
+}) // Handles GET requests to the "/api/notes" path and sends the saved notes from the database as JSON.
+
 
 
 // Starts the Express server and listens on the specified port. When the server starts, it logs a message to the console.
