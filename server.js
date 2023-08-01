@@ -23,6 +23,18 @@ app.get('/api/notes', (req, res) => {
   res.json(savedNotes)
 }) // Handles GET requests to the "/api/notes" path and sends the saved notes from the database as JSON.
 
+// Handles POST requests to the "/api/notes" path and adds a new note to the database.
+app.post('/api/notes', (req, res) => {
+  const newNote = {
+    title: req.body.title, text: req.body.text, id: uuidv4()
+  }
+  const savedNote = db;
+  savedNote.push(newNote);
+  console.log(savedNote);
+  fs.writeFileSync('./db/db.json', JSON.stringify(savedNote));
+  res.status(200).json(savedNote)
+}) 
+
 
 
 // Starts the Express server and listens on the specified port. When the server starts, it logs a message to the console.
