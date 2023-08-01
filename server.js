@@ -14,3 +14,10 @@ const db = require('./db/db.json') // Imports the JSON file representing the dat
 app.use(express.static('public')); // Serves static files from the "public" directory
 app.use(express.urlencoded({ extended: true })); // Parses incoming request bodies with URL-encoded payloads
 app.use(express.json()); // Parses incoming request bodies with JSON payloads
+
+
+
+// Starts the Express server and listens on the specified port. When the server starts, it logs a message to the console.
+app.listen(PORT, () =>
+  console.log(`Serving static asset routes on port at http://localhost:${PORT}!`)
+);
