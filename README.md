@@ -24,6 +24,6 @@ Cloned the initial code git repository. Added the following commands to the term
   ### Table of Content
   * [Description](#description)
   * [Installation](#installation)
-  * [Developer Information](#developer information)
+  * Developer Information
   * [License](#license)
   
