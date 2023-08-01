@@ -35,7 +35,18 @@ app.post('/api/notes', (req, res) => {
   res.status(200).json(savedNote)
 }) 
 
-
+// Handles DELETE requests to the "/api/notes/:id" path and deletes a note from the database based on its ID.
+app.delete('/api/notes/:id', (req, res) => {
+  const savedNote = db;
+  let noteID = req.params.id;
+  for (let i = 0; i < savedNote.length; i++) {
+    if (savedNote[i].id === noteID) {
+      savedNote.splice(i, 1)
+    }
+    fs.writeFileSync('./db/db.json', JSON.stringify(savedNote));
+  }
+  res.status(200).json(savedNote)
+})
 
 // Starts the Express server and listens on the specified port. When the server starts, it logs a message to the console.
 app.listen(PORT, () =>
