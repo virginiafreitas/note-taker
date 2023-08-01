@@ -10,3 +10,7 @@ const { v4: uuidv4 } = require('uuid'); // Imports UUID (Universally Unique Iden
 
 const db = require('./db/db.json') // Imports the JSON file representing the database
 
+// configure the middleware for the application
+app.use(express.static('public')); // Serves static files from the "public" directory
+app.use(express.urlencoded({ extended: true })); // Parses incoming request bodies with URL-encoded payloads
+app.use(express.json()); // Parses incoming request bodies with JSON payloads
